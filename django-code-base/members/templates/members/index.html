@@ -1,0 +1,537 @@
+{% extends "members/base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+
+  <div class="slider-area slide-1" style="background-image: url('/static/members/img/hero/hero_1.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="slider-active">
+
+      <div class="single-slider slider-height d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="hero__caption">
+                <span data-animation="fadeInLeft" data-delay=".1s" style="color: white;">Committed to reading</span>
+                <h1 data-animation="fadeInLeft" data-delay=".5s" style="color: white;">BookWonk
+                </h1>
+
+                <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
+                  {% if user.is_authenticated %}
+                  <p data-animation="fadeInLeft" data-delay=".9s" style="color: white;">Knowledge is power.
+                    Welcome back {{ user.name }} !
+                  </p>
+                  {% else %}
+                  <p data-animation="fadeInLeft" data-delay=".9s" style="color: white;">Knowledge is power.
+                    Information is liberating. Education is the premise of progress. Log In to continue to BookWonk
+                  </p>
+                  <a href="login" class="btn hero-btn">Login</a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-slider slider-height d-flex align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="hero__caption">
+                <span data-animation="fadeInLeft" data-delay=".1s" style="color: white;">Committed to reading</span>
+                <h1 data-animation="fadeInLeft" data-delay=".5s" style="color: white;">Capstone 2021 | CPG 54
+                </h1>
+                {% if user.is_authenticated == False %}
+                <p data-animation="fadeInLeft" data-delay=".9s" style="color: white;">Sign Up to try out the new era
+                  of learning and storing knowledge</p>
+
+                <div class="hero__btn" data-animation="fadeInLeft" data-delay="1.1s">
+                  <a href="{% url 'signup' %}" class="btn hero-btn">Sign Up</a>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="services-area section-padding3">
+    <div class="container">
+      <div class="row">
+        <div class="cl-xl-7 col-lg-8 col-md-10">
+
+          <div class="section-tittle mb-70">
+            <span>Why BookWonk ?</span>
+            <h2>Case Studies</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-10">
+          <div class="single-services mb-100">
+            <div class="services-img">
+              <img src="{% static 'members/img/gallery/case01.jpg' %}" alt="">
+            </div>
+            <div class="services-caption">
+              <span>Case 1</span>
+              <p><a href="#">People with listening disabilities</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+          <div class="single-services mb-100">
+            <div class="services-img">
+              <img src="{% static 'members/img/gallery/case02.jpg' %}" alt="">
+            </div>
+            <div class="services-caption">
+              <span>Case 2</span>
+              <p><a href="#">Researchers, Journalists and Lawyers</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+          <div class="single-services mb-100">
+            <div class="services-img">
+              <img src="{% static 'members/img/gallery/case03.jpg' %}" alt="">
+            </div>
+            <div class="services-caption">
+              <span>Case 3</span>
+              <p><a href="#">Teaching Community</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+          <div class="single-services mb-100">
+            <div class="services-img">
+              <img src="{% static 'members/img/gallery/case04.jpg' %}" alt="">
+            </div>
+            <div class="services-caption">
+              <span>Case 4</span>
+              <p><a href="#">Preservation of Documents</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider-area2">
+    <div class="slider-height2 hero-overly2 d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="hero-cap hero-cap2 text-center">
+              <h2 style="color: #ff2143;">Book Wonk</h2>
+              <p style="text-align: center; color: white; font-weight: 100;">A Book Reader with an Automatic
+                Page Turner and Voice
+                Assistance
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="about-details section-padding30">
+        <div class="container">
+          <div class="row">
+            <div class="offset-xl-1 col-lg-8">
+              <div class="about-details-cap mb-50">
+                <h4>Our Mission</h4>
+                <p>Capstone mai marks chahiye 🙂
+                </p>
+                <p> Fir saath hi saath project khatam karke paper publish kara denge.....because life is hard along with
+                  Placements and competitive exams for further studies.</p>
+              </div>
+              <div class="about-details-cap mb-50">
+                <h4>Our Vision</h4>
+                <p>To provide a platform for the general reading populace, especially people with disabilities, that
+                  makes book
+                  reading in hardcopy as well as a softcopy an easy hassle free, handsfree and enjoyable experience. The
+                  product is supported by Voice recognition, image recognition & speech to text conversion and
+                  vice-versa, supporting English and Hindi languages which will be accessible through the web
+                  application and a physical book reading stand.
+                </p>
+                <p>Baaki college jitna rokda degi......uspe bhi depend karta hai 😔</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+  <div class="services-area section-padding3">
+    <div class="container">
+      <div class="row">
+        <div class="cl-xl-7 col-lg-8 col-md-10">
+
+          <div class="section-tittle mb-70">
+            <span>Objective</span>
+            <h2>Mission and Vision</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-10">
+          <div class="single-services mb-100">
+            <div class="services-img">
+              <img src="{% static 'members/img/gallery/xservices1.png.pagespeed.ic.KeLtQqAHr1.png' %}" alt="">
+            </div>
+            <div class="services-caption">
+              <span>Our Mission</span>
+              <p><a href="#">Capstone mai marks chahiye....baaki toh Jai Mata Di 🙂</a></p>
+              <p>The
+                product is supported by Voice recognition, image recognition & speech to text conversion and
+                vice-versa, supporting English and Hindi languages which will be accessible through the web
+                application and a physical book reading stand.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-10">
+          <div class="single-services mb-100">
+            <div class="services-img">
+              <img src="{% static 'members/img/gallery/xservices2.png.pagespeed.ic.MInI9JOq2A.png' %}" alt="">
+            </div>
+            <div class="services-caption">
+              <span>Our Vision</span>
+              <p><a href="#">College jitna rokda degi......uspe bhi depend karta hai 😔</a></p>
+              <p>To provide a platform for the general reading populace, especially people with disabilities, that
+                makes book
+                reading in hardcopy as well as a softcopy an easy hassle free, handsfree and enjoyable experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="categories-area section-padding30">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="section-tittle mb-70">
+            <span>Our Top Services</span>
+            <h2>Product Overview</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="single-cat text-center mb-50">
+            <div class="cat-icon">
+              <span class="flaticon-development"></span>
+            </div>
+            <div class="cat-cap">
+              <h5><a href="#">Book Stand </a></h5>
+              <p>Automated process - Hard copy -> Scanning -> Reading</p>
+              <p>Features – Automatic Page Turner | Manual Start & Stop buttons | Voice Assistance (English &
+                Hindi)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="single-cat text-center mb-50" style="padding-bottom: 90px;">
+            <div class="cat-icon">
+              <span class="flaticon-result"></span>
+            </div>
+            <div class="cat-cap">
+              <h5><a href="#">Voice Assistance</a></h5>
+              <p>Pre defined voice commands
+              </p>
+              <ul>
+                <li style="color: #57667e;">
+                  Turn to specific page or chapter number
+                </li>
+                <li style="color: #57667e;">
+                  Search by voice powered by Google
+                </li>
+                <li style="color: #57667e;">
+                  Hardcopy to softcopy conversion
+                </li>
+                <li style="color: #57667e;">
+                  Notes by voice
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="single-cat text-center mb-50" style="padding-bottom: 60px;">
+            <div class="cat-icon">
+              <span class="flaticon-team"></span>
+            </div>
+            <div class="cat-cap">
+              <h5><a href="#">Software</a></h5>
+              <p>Web Application
+              </p>
+              <p>Features – Hard copy to soft copy conversion | Voice Assistance (English & Hindi) | User login
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="support-company-area pt-100 pb-100 section-bg fix"
+    data-background="{% static 'members/img/gallery/section_bg02.jpg' %}">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-6">
+          <div class="support-location-img">
+            <img src="{% static 'members/img/gallery/xabout.png.pagespeed.ic.NolByd-O8M.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6">
+          <div class="right-caption">
+
+            <div class="section-tittle section-tittle2 mb-50">
+              <span>Our Top Services</span>
+              <h2>Book Stand</h2>
+            </div>
+            <div class="support-caption">
+              <p class="pera-top">Mollit anim laborum duis adseu dolor iuyn voluptcate velit ess cillum dolore
+                egru
+                lofrre dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.</p>
+              <p class="mb-65">Mollit anim laborum.Dvcuis aute serunt iruxvfg dhjkolohr indd re voluptate velit
+                esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg
+                dhjinulpadeserunt moll.</p>
+              <a href="about.html" class="btn post-btn">More About Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-area testimonial-padding"
+    data-background="{% static 'members/img/gallery/section_bg04.jpg' %}">
+    <div class="container ">
+      <div class="row d-flex justify-content-center">
+        <div class="col-xl-10 col-lg-10 col-md-9">
+          <div class="h1-testimonial-active">
+
+            <div class="single-testimonial text-center">
+
+              <div class="testimonial-caption ">
+                <div class="testimonial-top-cap">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67px"
+                    height="49px">
+                    <path fill-rule="evenodd" fill="rgb(240, 78, 60)"
+                      d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z" />
+                  </svg>
+                  <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                    facilisis por incididunt ut labore et dolore mas. </p>
+                </div>
+
+                <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                  <div class="founder-img">
+                    <img src="{% static 'members/img/gallery/xHomepage_testi.png.pagespeed.ic.WGndXDdi3S.png' %}"
+                      alt="">
+                  </div>
+                  <div class="founder-text">
+                    <span>SpongeBob</span>
+                    <p>Lol</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="single-testimonial text-center">
+
+              <div class="testimonial-caption ">
+                <div class="testimonial-top-cap">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67px"
+                    height="49px">
+                    <path fill-rule="evenodd" fill="rgb(240, 78, 60)"
+                      d="M57.053,48.209 L42.790,48.209 L52.299,29.242 L38.036,29.242 L38.036,0.790 L66.562,0.790 L66.562,29.242 L57.053,48.209 ZM4.755,48.209 L14.263,29.242 L0.000,29.242 L0.000,0.790 L28.527,0.790 L28.527,29.242 L19.018,48.209 L4.755,48.209 Z" />
+                  </svg>
+                  <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                    facilisis por incididunt ut labore et dolore mas. </p>
+                </div>
+
+                <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                  <div class="founder-img">
+                    <img src="{% static 'members/img/gallery/xHomepage_testi.png.pagespeed.ic.WGndXDdi3S.png' %}"
+                      alt="">
+                  </div>
+                  <div class="founder-text">
+                    <span>Patrick</span>
+                    <p>Lol</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="count-down-area pb-120">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+
+          <div class="single-counter text-center">
+            <span class="counter">8705</span>
+            <!-- <p>Projects Completed</p> -->
+            <p>Dukh</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+
+          <div class="single-counter active text-center">
+            <span class="counter">480</span>
+            <!-- <p> Active Clients</p> -->
+            <p>Dard</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+
+          <div class="single-counter text-center">
+            <span class="counter">626</span>
+            <!-- <p>Cups of Coffee</p> -->
+            <p>Kasht</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+
+          <div class="single-counter text-center">
+            <span class="counter">9774</span>
+            <!-- <p>Happy Clients</p> -->
+            <p>Peedha</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="team-area section-padding30">
+    <div class="container">
+      <div class="row">
+        <div class="cl-xl-7 col-lg-8 col-md-10">
+
+          <div class="section-tittle mb-70">
+            <span>The Golden Quatro </span>
+            <h2>Team Members</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12"></div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="single-team mb-30">
+            <div class="team-img">
+              <img src="{% static 'members/img/gallery/xteam2.png.pagespeed.ic.ztMh4IVh87.png' %}" alt="">
+            </div>
+            <div class="team-caption">
+              <h3><a href="#">Alpha</a></h3>
+              <span>Lol</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="single-team mb-30">
+            <div class="team-img">
+              <img src="{% static 'members/img/gallery/xteam2.png.pagespeed.ic.ztMh4IVh87.png' %}" alt="">
+            </div>
+            <div class="team-caption">
+              <h3><a href="#">Bravo</a></h3>
+              <span>Lol</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12"></div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12"></div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="single-team mb-30">
+            <div class="team-img">
+              <img src="{% static 'members/img/gallery/team3.png' %}" alt="">
+            </div>
+            <div class="team-caption">
+              <h3><a href="#">Charlie</a></h3>
+              <span>Lol</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+          <div class="single-team mb-30">
+            <div class="team-img">
+              <img src="{% static 'members/img/gallery/xteam1.png.pagespeed.ic.FQ42DN_v4L.png' %}" alt="">
+            </div>
+            <div class="team-caption">
+              <h3><a href="#">Delta</a></h3>
+              <span>Lol</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="wantToWork-area w-padding2 section-bg"
+    data-background="{% static 'members/img/gallery/section_bg03.jpg' %}">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-xl-7 col-lg-9 col-md-8">
+          <div class="wantToWork-caption wantToWork-caption2">
+            <h2>Are you Searching<br> For Us ?</h2>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-md-4">
+          <a href="contact.html" class="btn btn-black f-right">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="home-blog-area section-padding30">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-tittle mb-100">
+            <span style="text-align: center;">Recent News of us</span>
+            <h2 style="text-align: center;">Research Paper</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12">
+          <center><embed src="{% static 'members/embeds/PCPG54.pdf' %}" width="500" height="500"></center>
+        </div>
+        <!-- <div class="col-xl-6 col-lg-6 col-md-6">
+              <div class="home-blog-single mb-30">
+                <div class="blog-img-cap">
+                  <div class="blog-img">
+                    <img src="members/img/gallery/xhome_blog2.png.pagespeed.ic.8I1mcC3hCX.png" alt="">
+                    <ul>
+                      <li>By Admin - October 27, 2020</li>
+                    </ul>
+                  </div>
+                  <div class="blog-cap">
+                    <h3><a href="blog_details.html">16 Easy Ideas to Use in Everyday</a></h3>
+                    <p>Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnua
+                      Quis ipsum suspendisse ultrices gra.</p>
+                    <a href="blog_details.html" class="more-btn">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

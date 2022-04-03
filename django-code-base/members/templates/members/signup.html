@@ -1,0 +1,67 @@
+{% extends "members/base.html" %}
+{% load static %}
+    {% block content %}
+        <main>
+            <div class="intro-section" id="home-section">
+
+                <div class="slide-1" style="background-image: url('assets/img/hero/hero_1.jpg');"
+                    data-stellar-background-ratio="0.5">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-6 col-md-12 mb-4">
+                                        <h1 data-aos="fade-up" data-aos-delay="100">Sign Up</h1>
+                                        <p class="mb-4" data-aos="fade-up" data-aos-delay="200">Experience the power of
+                                            handsfree and automated book reading</p>
+                                        <!--p data-aos="fade-up" data-aos-delay="300"><a href="#" class="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p-->
+
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-12 ml-auto signbox" data-aos="fade-up"
+                                        data-aos-delay="500"
+                                        style="padding-left: 15px; padding-right: 15px; min-height: 1px; position: relative;">
+                                        <form method="POST" class="form-box">
+                                            {% csrf_token %}
+                                            {{ form.non_field_errors }}
+                                            {% if form.errors %}
+                                                <div class="alert alert-warning" role="alert">
+                                                    {{ form.errors }}
+                                                </div>
+                                            {% endif %}
+                                            <h3 class="h4 text-black mb-4">Sign Up</h3>
+                                            <div class="form-group">
+                                                {{ form.name }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.email }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.mobile }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.rollNo }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.degree }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.branch }}
+                                            </div>
+                                            <div class="form-group">
+                                                {{ form.year }}
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" class="btn btn-primary btn-pill" value="signup"/>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    {% endblock %}
