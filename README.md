@@ -7,7 +7,4 @@ Features – Automatic Page Turner | Manual Start & Stop buttons
   
 Software:
 Web application | User login  
-Features: 
-1. Voice Assistance (English) 
-2. Hardcopy to softcopy (pdf) conversion  
-3. Notes by voice  
+Features: Voice Assistance (English) | Hardcopy to softcopy (pdf) conversion | Notes by voice  
